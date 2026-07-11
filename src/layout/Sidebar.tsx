@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { CURRENT_USER, getInitials } from '../lib/currentUser'
 import './Sidebar.css'
 
 interface SidebarProps {
@@ -49,10 +50,10 @@ export function Sidebar({ open, onNavigate }: SidebarProps) {
       </nav>
 
       <div className="sidebar__footer">
-        <span className="sidebar__avatar">MF</span>
+        <span className="sidebar__avatar">{getInitials(CURRENT_USER.name)}</span>
         <div className="sidebar__user">
-          <strong>Marco Figueroa</strong>
-          <span>Cuenta verificada</span>
+          <strong>{CURRENT_USER.name}</strong>
+          <span>{CURRENT_USER.status}</span>
         </div>
       </div>
     </aside>
