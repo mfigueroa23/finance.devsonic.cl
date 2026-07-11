@@ -1,0 +1,22 @@
+.accounts-section {
+  margin-top: 32px;
+}
+
+.accounts-section__title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+}
+
+.accounts-section__error {
+  color: var(--color-expense);
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
