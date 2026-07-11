@@ -1,13 +1,14 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppLayout } from './layout/AppLayout'
 import { ComingSoonPage } from './pages/ComingSoonPage'
+import { CuentasPage } from './pages/CuentasPage'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<AppLayout />}>
         <Route index element={<Navigate to="/cuentas" replace />} />
-        <Route path="cuentas" element={<ComingSoonPage title="Cuentas" />} />
+        <Route path="cuentas" element={<CuentasPage />} />
         <Route path="ingresos" element={<ComingSoonPage title="Ingresos" />} />
         <Route path="cargos" element={<ComingSoonPage title="Cargos" />} />
         <Route
