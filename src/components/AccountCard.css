@@ -1,0 +1,63 @@
+.account-card {
+  border-radius: 16px;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 140px;
+}
+
+.account-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-card__name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.account-card__balance {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.account-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.account-card--checking {
+  background: linear-gradient(
+    135deg,
+    var(--color-account-checking-from),
+    var(--color-account-checking-to)
+  );
+}
+
+.account-card--savings {
+  background: linear-gradient(
+    135deg,
+    var(--color-account-savings-from),
+    var(--color-account-savings-to)
+  );
+}
+
+.account-card--credit {
+  background: linear-gradient(
+    135deg,
+    var(--color-account-credit-from),
+    var(--color-account-credit-to)
+  );
+}
+
+.account-card--default {
+  background: var(--color-nav-dark);
+}
