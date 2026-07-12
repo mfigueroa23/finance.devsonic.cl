@@ -1,0 +1,50 @@
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.quick-actions__button {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  border-radius: 14px;
+  background: var(--color-nav-dark);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+.quick-actions__badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quick-actions__badge--income {
+  background: var(--color-income);
+}
+
+.quick-actions__badge--charge {
+  background: var(--color-expense);
+}
+
+.quick-actions__badge--transfer {
+  background: var(--color-transfer);
+}
+
+.quick-actions__icon {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}

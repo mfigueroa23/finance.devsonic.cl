@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { getAccounts, getAccountTypes, type Account, type AccountType } from '../lib/apiClient'
 
 export interface AccountWithType extends Account {
@@ -9,12 +9,14 @@ interface UseAccountsResult {
   accounts: AccountWithType[]
   loading: boolean
   error: string | null
+  refetch: () => void
 }
 
 export function useAccounts(): UseAccountsResult {
   const [accounts, setAccounts] = useState<AccountWithType[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [reloadKey, setReloadKey] = useState(0)
 
   useEffect(() => {
     let cancelled = false
@@ -48,7 +50,13 @@ export function useAccounts(): UseAccountsResult {
     return () => {
       cancelled = true
     }
+  }, [reloadKey])
+
+  const refetch = useCallback(() => {
+    setLoading(true)
+    setError(null)
+    setReloadKey((key) => key + 1)
   }, [])
 
-  return { accounts, loading, error }
+  return { accounts, loading, error, refetch }
 }

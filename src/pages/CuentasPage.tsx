@@ -1,11 +1,12 @@
 import { AccountCard } from '../components/AccountCard'
 import { AddAccountCard } from '../components/AddAccountCard'
+import { QuickActions } from '../components/QuickActions'
 import { WelcomeHeader } from '../components/WelcomeHeader'
 import { useAccounts } from '../hooks/useAccounts'
 import './CuentasPage.css'
 
 export function CuentasPage() {
-  const { accounts, loading, error } = useAccounts()
+  const { accounts, loading, error, refetch } = useAccounts()
 
   return (
     <>
@@ -26,6 +27,10 @@ export function CuentasPage() {
           </div>
         )}
       </section>
+
+      {!loading && !error && (
+        <QuickActions accounts={accounts} onMovementCreated={refetch} />
+      )}
     </>
   )
 }
