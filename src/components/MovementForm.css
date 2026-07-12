@@ -1,0 +1,70 @@
+.movement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.movement-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movement-form__field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.movement-form__field input,
+.movement-form__field select,
+.movement-form__field textarea {
+  border: 1px solid #d8d5cd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: #fff;
+}
+
+.movement-form__field textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.movement-form__error {
+  color: var(--color-expense);
+  font-size: 13px;
+  margin: 0;
+}
+
+.movement-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.movement-form__cancel {
+  border: none;
+  background: none;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+.movement-form__submit {
+  border: none;
+  border-radius: 8px;
+  background: var(--color-nav-dark);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.movement-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
