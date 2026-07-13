@@ -51,6 +51,26 @@ export interface CreateTransferInput {
   to_account_id: number
 }
 
+export interface Income {
+  id: number
+  name: string
+  date: string
+  amount: string
+  detail?: string | null
+  income_type_id: number
+  account_id: number
+}
+
+export interface Charge {
+  id: number
+  name: string
+  amount: string
+  date: string
+  detail?: string | null
+  account_id: number
+  charge_type_id: number
+}
+
 interface ApiFetchOptions {
   method?: 'GET' | 'POST'
   body?: unknown
@@ -96,4 +116,12 @@ export function createCharge(input: CreateChargeInput) {
 
 export function createTransfer(input: CreateTransferInput) {
   return apiFetch<{ id: number }>('/transfers', { method: 'POST', body: input })
+}
+
+export function getIncomes() {
+  return apiFetch<Income[]>('/income')
+}
+
+export function getCharges() {
+  return apiFetch<Charge[]>('/charges')
 }
