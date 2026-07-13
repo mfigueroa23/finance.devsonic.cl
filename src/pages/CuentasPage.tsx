@@ -1,5 +1,6 @@
 import { AccountCard } from '../components/AccountCard'
 import { AddAccountCard } from '../components/AddAccountCard'
+import { IncomeExpenseChart } from '../components/IncomeExpenseChart'
 import { QuickActions } from '../components/QuickActions'
 import { WelcomeHeader } from '../components/WelcomeHeader'
 import { useAccounts } from '../hooks/useAccounts'
@@ -31,6 +32,10 @@ export function CuentasPage() {
       {!loading && !error && (
         <QuickActions accounts={accounts} onMovementCreated={refetch} />
       )}
+
+      <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
+        <IncomeExpenseChart />
+      </div>
     </>
   )
 }
