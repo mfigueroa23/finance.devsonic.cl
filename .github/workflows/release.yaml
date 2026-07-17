@@ -23,9 +23,10 @@ jobs:
         with:
           node-version: '24.16.0'
 
-      - uses: pnpm/action-setup@v6
+      - name: "Setting up PNPM"
+        uses: pnpm/action-setup@v6.0.9
         with:
-          version: 11.12
+          version: 11
           standalone: true
 
       - name: "Installing dependencies"
