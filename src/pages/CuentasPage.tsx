@@ -2,6 +2,7 @@ import { AccountCard } from '../components/AccountCard'
 import { AddAccountCard } from '../components/AddAccountCard'
 import { ExpensesByCategoryChart } from '../components/ExpensesByCategoryChart'
 import { IncomeExpenseChart } from '../components/IncomeExpenseChart'
+import { MovementHistory } from '../components/MovementHistory'
 import { QuickActions } from '../components/QuickActions'
 import { WelcomeHeader } from '../components/WelcomeHeader'
 import { useAccounts } from '../hooks/useAccounts'
@@ -38,6 +39,8 @@ export function CuentasPage() {
         <IncomeExpenseChart />
         <ExpensesByCategoryChart />
       </div>
+
+      <MovementHistory />
     </>
   )
 }
