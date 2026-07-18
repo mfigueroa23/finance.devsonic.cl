@@ -1,0 +1,82 @@
+.movement-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(35, 38, 46, 0.08);
+}
+
+.movement-item:last-child {
+  border-bottom: none;
+}
+
+.movement-item__badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.movement-item__badge--income {
+  background: #dff5eb;
+  color: var(--color-income);
+}
+
+.movement-item__badge--charge {
+  background: #fbe7dc;
+  color: var(--color-expense);
+}
+
+.movement-item__badge--transfer {
+  background: #f1e3f8;
+  color: var(--color-transfer);
+}
+
+.movement-item__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.movement-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.movement-item__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.movement-item__subtitle {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.movement-item__amount-group {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.movement-item__amount {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.movement-item__amount--positive {
+  color: var(--color-income);
+}
+
+.movement-item__amount--negative {
+  color: var(--color-text-primary);
+}
+
+.movement-item__timestamp {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
