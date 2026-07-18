@@ -27,3 +27,11 @@ export function formatMovementTimestamp(date: string) {
 
   return `${day} ${month}, ${time}`
 }
+
+export function formatDate(date: string) {
+  const value = new Date(date)
+  const day = value.getDate()
+  const month = MONTH_LABELS[value.getMonth()].toLowerCase()
+
+  return `${day} ${month} ${value.getFullYear()}`
+}
