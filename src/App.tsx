@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppLayout } from './layout/AppLayout'
+import { CargosPage } from './pages/CargosPage'
 import { ComingSoonPage } from './pages/ComingSoonPage'
 import { CuentasPage } from './pages/CuentasPage'
 import { IngresosPage } from './pages/IngresosPage'
@@ -13,7 +14,7 @@ function App() {
         <Route path="cuentas" element={<CuentasPage />} />
         <Route path="movimientos" element={<MovimientosPage />} />
         <Route path="ingresos" element={<IngresosPage />} />
-        <Route path="cargos" element={<ComingSoonPage title="Cargos" />} />
+        <Route path="cargos" element={<CargosPage />} />
         <Route
           path="transferencias"
           element={<ComingSoonPage title="Transferencias" />}
