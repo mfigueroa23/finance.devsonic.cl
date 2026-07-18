@@ -1,5 +1,6 @@
 import { AccountCard } from '../components/AccountCard'
 import { AddAccountCard } from '../components/AddAccountCard'
+import { ExpensesByCategoryChart } from '../components/ExpensesByCategoryChart'
 import { IncomeExpenseChart } from '../components/IncomeExpenseChart'
 import { QuickActions } from '../components/QuickActions'
 import { WelcomeHeader } from '../components/WelcomeHeader'
@@ -35,6 +36,7 @@ export function CuentasPage() {
 
       <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
         <IncomeExpenseChart />
+        <ExpensesByCategoryChart />
       </div>
     </>
   )
