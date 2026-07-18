@@ -1,0 +1,103 @@
+.ingresos-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ingresos-page__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.ingresos-page__new-button {
+  border: none;
+  border-radius: 8px;
+  background: var(--color-nav-dark);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 18px;
+}
+
+.ingresos-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ingresos-page__filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ingresos-page__filter-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.ingresos-page__filter-field input,
+.ingresos-page__filter-field select {
+  border: 1px solid #d8d5cd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: #fff;
+}
+
+.ingresos-page__clear-filters {
+  border: none;
+  background: none;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.ingresos-page__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ingresos-page__table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding: 0 0 12px;
+  border-bottom: 1px solid rgba(35, 38, 46, 0.08);
+}
+
+.ingresos-page__table td {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(35, 38, 46, 0.08);
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.ingresos-page__table tr:last-child td {
+  border-bottom: none;
+}
+
+.ingresos-page__amount {
+  font-weight: 700;
+  color: var(--color-income);
+  text-align: right;
+}
+
+.ingresos-page__table th:last-child,
+.ingresos-page__table td:last-child {
+  text-align: right;
+}
