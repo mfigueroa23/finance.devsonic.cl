@@ -1,0 +1,25 @@
+.movimientos-page__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 24px;
+}
+
+.movimientos-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movimientos-page__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.movimientos-page__page-label {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}

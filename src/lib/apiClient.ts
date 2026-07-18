@@ -71,6 +71,16 @@ export interface Charge {
   charge_type_id: number
 }
 
+export interface Transfer {
+  id: number
+  name: string
+  amount: string
+  date: string
+  detail?: string | null
+  from_account_id: number
+  to_account_id: number
+}
+
 interface ApiFetchOptions {
   method?: 'GET' | 'POST'
   body?: unknown
@@ -124,4 +134,8 @@ export function getIncomes() {
 
 export function getCharges() {
   return apiFetch<Charge[]>('/charges')
+}
+
+export function getTransfers() {
+  return apiFetch<Transfer[]>('/transfers')
 }

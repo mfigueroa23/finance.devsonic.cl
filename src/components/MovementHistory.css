@@ -1,0 +1,34 @@
+.movement-history {
+  margin-top: 32px;
+}
+
+.movement-history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.movement-history__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.movement-history__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-account-checking-from);
+  text-decoration: none;
+}
+
+.movement-history__link:hover {
+  text-decoration: underline;
+}
+
+.movement-history__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
