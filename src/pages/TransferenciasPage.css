@@ -1,0 +1,63 @@
+.transferencias-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.transferencias-page__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.transferencias-page__new-button {
+  border: none;
+  border-radius: 8px;
+  background: var(--color-nav-dark);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 18px;
+}
+
+.transferencias-page__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transferencias-page__table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding: 0 0 12px;
+  border-bottom: 1px solid rgba(35, 38, 46, 0.08);
+}
+
+.transferencias-page__table td {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(35, 38, 46, 0.08);
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.transferencias-page__table tr:last-child td {
+  border-bottom: none;
+}
+
+.transferencias-page__amount {
+  font-weight: 700;
+  color: var(--color-transfer);
+  text-align: right;
+}
+
+.transferencias-page__table th:last-child,
+.transferencias-page__table td:last-child {
+  text-align: right;
+}

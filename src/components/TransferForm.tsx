@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import type { AccountWithType } from '../hooks/useAccounts'
 import { createTransfer } from '../lib/apiClient'
+import { formatCurrency } from '../lib/format'
 import './MovementForm.css'
 
 interface TransferFormProps {
@@ -24,6 +25,8 @@ export function TransferForm({ accounts, onSuccess, onCancel }: TransferFormProp
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  const fromAccount = accounts.find((account) => String(account.id) === fromAccountId)
+
   async function handleSubmit(event: FormEvent) {
     event.preventDefault()
 
@@ -39,6 +42,11 @@ export function TransferForm({ accounts, onSuccess, onCancel }: TransferFormProp
 
     if (fromAccountId === toAccountId) {
       setError('La cuenta de origen y destino deben ser distintas.')
+      return
+    }
+
+    if (fromAccount && Number(amount) > Number(fromAccount.total_amount)) {
+      setError('El monto excede el saldo disponible en la cuenta de origen.')
       return
     }
 
@@ -114,6 +122,11 @@ export function TransferForm({ accounts, onSuccess, onCancel }: TransferFormProp
             </option>
           ))}
         </select>
+        {fromAccount && (
+          <span className="movement-form__hint">
+            Saldo disponible: {formatCurrency(fromAccount.total_amount)}
+          </span>
+        )}
       </div>
 
       <div className="movement-form__field">
