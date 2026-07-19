@@ -33,3 +33,20 @@ export function getLastSixMonths(reference: Date = new Date()): MonthBucket[] {
 
   return buckets
 }
+
+export function getMonthsInRange(from: Date, to: Date): MonthBucket[] {
+  const buckets: MonthBucket[] = []
+  const cursor = new Date(from.getFullYear(), from.getMonth(), 1)
+  const end = new Date(to.getFullYear(), to.getMonth(), 1)
+
+  while (cursor <= end) {
+    buckets.push({
+      year: cursor.getFullYear(),
+      month: cursor.getMonth(),
+      label: `${MONTH_LABELS[cursor.getMonth()]} ${String(cursor.getFullYear()).slice(-2)}`,
+    })
+    cursor.setMonth(cursor.getMonth() + 1)
+  }
+
+  return buckets
+}
