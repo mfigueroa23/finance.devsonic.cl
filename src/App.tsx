@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppLayout } from './layout/AppLayout'
 import { CargosPage } from './pages/CargosPage'
-import { ComingSoonPage } from './pages/ComingSoonPage'
 import { CuentasPage } from './pages/CuentasPage'
+import { EstadisticasPage } from './pages/EstadisticasPage'
 import { IngresosPage } from './pages/IngresosPage'
 import { MovimientosPage } from './pages/MovimientosPage'
 import { TransferenciasPage } from './pages/TransferenciasPage'
@@ -17,10 +17,7 @@ function App() {
         <Route path="ingresos" element={<IngresosPage />} />
         <Route path="cargos" element={<CargosPage />} />
         <Route path="transferencias" element={<TransferenciasPage />} />
-        <Route
-          path="estadisticas"
-          element={<ComingSoonPage title="Estadísticas" />}
-        />
+        <Route path="estadisticas" element={<EstadisticasPage />} />
       </Route>
     </Routes>
   )
