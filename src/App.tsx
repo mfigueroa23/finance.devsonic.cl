@@ -5,6 +5,7 @@ import { ComingSoonPage } from './pages/ComingSoonPage'
 import { CuentasPage } from './pages/CuentasPage'
 import { IngresosPage } from './pages/IngresosPage'
 import { MovimientosPage } from './pages/MovimientosPage'
+import { TransferenciasPage } from './pages/TransferenciasPage'
 
 function App() {
   return (
@@ -15,10 +16,7 @@ function App() {
         <Route path="movimientos" element={<MovimientosPage />} />
         <Route path="ingresos" element={<IngresosPage />} />
         <Route path="cargos" element={<CargosPage />} />
-        <Route
-          path="transferencias"
-          element={<ComingSoonPage title="Transferencias" />}
-        />
+        <Route path="transferencias" element={<TransferenciasPage />} />
         <Route
           path="estadisticas"
           element={<ComingSoonPage title="Estadísticas" />}
